@@ -13,41 +13,22 @@ A special thanks go the Consul Project Team who did and still doing amazing job 
 
 Meet democracy platform allows the participants of your community to debate and vote on legislation, budget and more. Our goal is to make community development easy. We intend to democratize community participation by making it accessible to all. We recognize the importance of having access to a democratic and trustworthy platform. Give your community citizens the freedom to express themselves.
 
+## What's new ?
 
-## Installation
+- Add a cookie consent form and a link to privacy page
+[gem 'cookies_eu'](https://github.com/infinum/cookies_eu)
+We are using the gem 'cookies_eu'
+Added custom CSS file: app/assets/stylesheets/custom/cookies_eu.scss
+If you wish to customize the style of the div the classes are:
 
-**NOTE**: For more detailed instructions read the original Consul project [documentation](https://docs.consulproject.org)
+.cookies-eu                 /* main div */
+.cookies-eu-content-holder  /* content holder */
+.cookies-eu-button-holder   /* button holder */
+.cookies-eu-ok              /* button */
+.cookies-eu-link            /* link */
 
-Prerequisites: install git, Ruby 2.7.6, CMake, pkg-config, shared-mime-info, Node.js and PostgreSQL (>=9.5).
+Translation ready in dozens of languages
 
-```bash
-git clone https://github.com/netoum/meetdemocracy-consul.git
-cd meetdemocracy-consul
-bundle install
-cp config/database.yml.example config/database.yml
-cp config/secrets.yml.example config/secrets.yml
-bin/rake db:create
-bin/rake db:migrate
-bin/rake db:dev_seed
-RAILS_ENV=test rake db:setup
-```
-
-Run the app locally:
-
-```bash
-bin/rails s
-```
-
-
-You can use the default admin user from the seeds file:
-
- **user:** admin
- **pass:** meetdemocracy
-
-But for some actions like voting, you will need a verified user, the seeds file also includes one:
-
- **user:** verified
- **pass:** meetdemocracy
 
 ## Run Locally
 
@@ -79,7 +60,9 @@ cp config/secrets.yml.example config/secrets.yml
 Setup the database
 
 ```bash
-  npm run start
+bin/rake db:create
+bin/rake db:migrate
+bin/rake db:dev_seed
 ```
 
 Start the server
@@ -88,6 +71,14 @@ Start the server
 bin/rake s
 ```
 
-## License
+## Demonstration Admin and User
 
-Code published under AFFERO GPL v3 (see [LICENSE-AGPLv3.txt](LICENSE-AGPLv3.txt))
+You can use the default admin user from the seeds file:
+
+ **user:** admin
+ **pass:** meetdemocracy
+
+But for some actions like voting, you will need a verified user, the seeds file also includes one:
+
+ **user:** verified
+ **pass:** meetdemocracy
