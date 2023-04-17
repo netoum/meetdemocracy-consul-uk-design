@@ -2,3 +2,21 @@
 //
 // You can also create SCSS files in the app/assets/stylesheets/custom/
 // folder and they will be loaded automatically.
+
+// Homepage Jumbo
+.jumbo {
+    background: $brand-secondary;
+}
+
+.background-header {
+    background: $brand-secondary!important;
+}
+
+
+//Homepage Proposal Feed
+
+.feed-proposals .proposal {  
+    .feed-image {
+      display: table-cell;
+    }
+  }
