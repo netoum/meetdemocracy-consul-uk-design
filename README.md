@@ -21,11 +21,13 @@ We are using the gem 'cookies_eu'
 Added custom CSS file: app/assets/stylesheets/custom/cookies_eu.scss
 If you wish to customize the style of the div the classes are:
 
+```bash
 .cookies-eu                 /* main div */
 .cookies-eu-content-holder  /* content holder */
 .cookies-eu-button-holder   /* button holder */
 .cookies-eu-ok              /* button */
 .cookies-eu-link            /* link */
+```
 
 Translation ready in dozens of languages
 
