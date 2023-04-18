@@ -3,7 +3,7 @@
 
 **NOTE** This is a **fork** of [Consul Project](https://github.com/consul/consul/).
 
-A special thanks go the Consul Project Team who did and still doing amazing job with continious updates and support.
+Our sincere thanks and appreciation go out to Consul Project for the incredible work and support they have provided.
 
 ![Meet Democracy logo](https://meetdemocracy.com/images/LogoMeetDemocracy.png)
 
