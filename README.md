@@ -29,6 +29,13 @@ If you wish to customize the style of the div the classes are:
 
 Translation ready in dozens of languages
 
+- Changes of Settings, Users, Dev Seeds images
+
+- Changes of layout for the devise pages ( signup / signin )
+
+- Changes of Vote count for debates and legislation proposals
+Changing the way debates votes are showed to the users. 
+Show total votes instead of vote score
 
 ## Run Locally
 
