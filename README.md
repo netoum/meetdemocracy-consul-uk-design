@@ -37,6 +37,13 @@ Translation ready in dozens of languages
 Changing the way debates votes are showed to the users. 
 Show total votes instead of vote score
 
+- Add Gem 'rails-timeago', '~> 2.0'
+Format the date in a pretty way ( 1 days ago, 1 month ago)
+Translation ready in dozens of languages
+Changes in views for Debates, Proposals and Comments
+[gem 'rails-timeago'](https://github.com/jgraichen/rails-timeago)
+
+
 ## Run Locally
 
 Clone the project

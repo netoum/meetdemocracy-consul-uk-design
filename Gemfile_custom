@@ -25,3 +25,5 @@
 # Add your custom gem dependencies here
 
 gem 'cookies_eu'
+
+gem 'rails-timeago', '~> 2.0'

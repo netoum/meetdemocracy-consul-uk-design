@@ -114,7 +114,12 @@
 //= require_tree ./admin
 //= require_tree ./sdg
 //= require_tree ./sdg_management
+
 //= require cookies_eu
+
+//= require rails-timeago
+//= require rails-timeago-all
+
 //= require custom
 //= require_tree ./custom
 
