@@ -6,23 +6,32 @@
     <%= raw setting["html.per_page_code_head"] %>
   </head>
 
-  <body class="auth-page">
+  <body class="auth-page public">
     <%= render 'cookies_eu/consent_banner', link: '/privacy', target: '_blank' %>
 
     <%= raw setting["html.per_page_code_body"] %>
+
     <div class="wrapper">
-      <div class="auth-image small-12 medium-3 column"
-           style="background-image: url(<%= asset_url(image_path_for("auth_bg.jpg")) %>)">
+      <header>
+      <div class="top-bar small-12 column center">
         <h1 class="logo margin">
           <%= link_to root_path do %>
             <%= image_tag(image_path_for("logo_header.png"), class: "float-left", alt: setting["org_name"]) %>
           <% end %>
         </h1>
       </div>
+    </header>
+  </div>
+  <div class="wrapper">
 
-      <div class="small-12 medium-9 column">
         <div class="row">
-          <div class="small-12 medium-9 large-7 small-centered column">
+          
+          <div class="medium-6 column hide-for-small-only">
+      <%= image_tag(image_path_for("devise.png"), style:"margin-top: 50%; margin-bottom:50%;") %>
+          </div>
+     
+      <div class="small-12 medium-6 column ">
+       
             <div class="auth-form margin">
               <%= render "layouts/flash" %>
 
@@ -30,9 +39,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
+  </div>
+    
     <div class="footer">
       <%= render Layout::FooterComponent.new %>
     </div>
