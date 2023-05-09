@@ -1,7 +1,8 @@
 
-# Meet Democracy fork of Consul project
+# Meet Democracy public Consul fork using GOV.UK design system
 
-**NOTE** This is a **fork** of [Consul Project](https://github.com/consul/consul/).
+
+**NOTE** This is a **fork** of [Meet Democracy Consul](https://github.com/netoum/meetdemocracy-consul).
 
 Our sincere thanks and appreciation go out to Consul Project for the incredible work and support they have provided.
 
@@ -15,35 +16,14 @@ Meet democracy platform allows the participants of your community to debate and 
 
 ## What's new ?
 
-- Add a cookie consent form and a link to privacy page
-[gem 'cookies_eu'](https://github.com/infinum/cookies_eu)
-We are using the gem 'cookies_eu'
-Added custom CSS file: app/assets/stylesheets/custom/cookies_eu.scss
-If you wish to customize the style of the div the classes are:
+- Add Gem "govuk_publishing_components"
+Design your service using GOV.UK styles, components and patterns
+Use this design system to make government services consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.
+[gem 'govuk_publishing_components'](https://design-system.service.gov.uk/)
 
-```bash
-.cookies-eu                 /* main div */
-.cookies-eu-content-holder  /* content holder */
-.cookies-eu-button-holder   /* button holder */
-.cookies-eu-ok              /* button */
-.cookies-eu-link            /* link */
-```
-
-Translation ready in dozens of languages
-
-- Changes of Settings, Users, Dev Seeds images
-
-- Changes of layout for the devise pages ( signup / signin )
-
-- Changes of Vote count for debates and legislation proposals
-Changing the way debates votes are showed to the users. 
-Show total votes instead of vote score
-
-- Add Gem 'rails-timeago', '~> 2.0'
-Format the date in a pretty way ( 1 days ago, 1 month ago)
-Translation ready in dozens of languages
-Changes in views for Debates, Proposals and Comments
-[gem 'rails-timeago'](https://github.com/jgraichen/rails-timeago)
+- Add Custom route for Gov.UK component route.
+Only available for development environment
+Can be access at http://localhost:3000/component-guide/
 
 
 ## Run Locally
