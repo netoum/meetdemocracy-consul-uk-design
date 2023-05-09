@@ -120,6 +120,9 @@
 //= require rails-timeago
 //= require rails-timeago-all
 
+//= require govuk_publishing_components/dependencies
+//= require govuk_publishing_components/lib
+
 //= require custom
 //= require_tree ./custom
 
