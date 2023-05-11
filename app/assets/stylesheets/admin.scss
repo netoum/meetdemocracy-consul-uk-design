@@ -169,14 +169,14 @@ $table-header:   #ecf1f6;
 
     [type]:not([type="button"], [type=checkbox], [type=file], [type=radio], [type=submit]),
     select {
-      background-color: $white;
-      border: $admin-border;
-      border-radius: rem-calc(6);
-      box-shadow: none;
+      // background-color: $white;
+      // border: $admin-border;
+      // border-radius: rem-calc(6);
+      // box-shadow: none;
 
-      &:focus {
-        border: $input-border-focus;
-      }
+      // &:focus {
+      //   border: $input-border-focus;
+      // }
     }
   }
 
