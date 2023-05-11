@@ -3,10 +3,13 @@ module LayoutsHelper
     title = t("shared.go_to_page") + text
 
     if is_active
-      tag.span(t("shared.you_are_in"), class: "show-for-sr") + " " +
-        link_to(text, path, options.merge(class: "is-active", title: title))
+      tag.li(class: "govuk-header__navigation-item govuk-header__navigation-item--active") do
+        link_to(text, path, options.merge(class: "govuk-header__link", title: title))
+      end
     else
-      link_to(text, path, options.merge(title: title))
+      tag.li(class: "govuk-header__navigation-item") do
+      link_to(text, path, options.merge(class: "govuk-header__link",title: title))
+      end
     end
   end
 

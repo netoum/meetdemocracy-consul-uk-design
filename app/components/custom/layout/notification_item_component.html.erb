@@ -1,0 +1,11 @@
+<% if user %>
+  <li id="notifications" class="govuk-header__navigation-item">
+    <%= link_to notifications_path, rel: "nofollow", title: text,
+                class: "govuk-header__link govuk-!-margin-right-5 notifications #{notifications_class}" do %>
+      <span class="show-for-sr">
+        <%= t("layouts.header.notification_item.notifications") %>
+      </span>
+      <span class="show-for-small-only"><%= text %></span>
+    <% end %>
+  </li>
+<% end %>
