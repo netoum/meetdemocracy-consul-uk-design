@@ -1,0 +1,14 @@
+<div id="search_form" class="search-form-header">
+  <%= form_tag search_path, method: :get do %>
+  <%= render "govuk_publishing_components/components/search", {
+    label_text: t("#{i18n_namespace}.placeholder"),
+    inline_label: false,
+    value: params[:search],
+    id: "search_text",
+    name: "search",
+    button_text: t("#{i18n_namespace}.button"),
+        wrap_label_in_a_heading: true,
+  heading_level: 2
+  } %>
+  <% end %>
+</div>

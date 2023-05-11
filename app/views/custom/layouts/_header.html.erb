@@ -1,31 +1,47 @@
-<header>
-  <%= render Layout::RemoteTranslationsButtonComponent.new(@remote_translations) %>
+<%= render Layout::RemoteTranslationsButtonComponent.new(@remote_translations) %>
+<%= render Layout::TopLinksComponent.new %>
 
-
-  <div class="top-bar">
-    <h1>
-      <%= link_to root_path, accesskey: "0" do %>
-        <%= image_tag(image_path_for("logo_header.png"), alt: setting["org_name"]) %>
-      <% end %>
-    </h1>
-
-    <%= render Layout::ResponsiveMenuComponent.new do %>
-      <%= render Layout::AccountMenuComponent.new(current_user) %>
-
-      <div class="show-for-small-only">
-        <div class="subnavigation subnavigation-with-top-links">
-          <%= render Layout::SubnavigationComponent.new %>
-          <%= render Layout::TopLinksComponent.new %>
+<header class="gem-c-layout-header govuk-header gem-c-layout-header--demonstration"  role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+      <div class="govuk-grid-row">
+        <div class="gem-c-layout-header__logo govuk-grid-column-one-thirds">
+          <div class="govuk-header__logo gem-c-header__logo">
+            <a href="<%= root_path %>" class="govuk-header__link govuk-header__link--homepage" data-module="gem-track-click" data-track-category="homeLinkClicked" data-track-action="homeHeader">
+              <span class="govuk-header__logotype gem-c-header__logotype header-logo">
+                <span class="govuk-header__logotype-text">
+                 <%= setting["org_name"] %>
+                </span>
+              </span>
+                <span class="gem-c-environment-tag govuk-tag gem-c-environment-tag--development">
+                  development
+                </span>
+            </a>
+          </div>          
         </div>
-      </div>
-    <% end %>
+         
+          <div class="govuk-header__content gem-c-header__content govuk-grid-column-full">
+            <%= tag.nav class: "gem-c-header__nav govuk-header__navigation govuk-header__navigation--end", aria: { label: "Top level" } do %>
+            <button
+              aria-controls="navigation"
+              aria-label="Show or hide Top Level Navigation"
+              class="govuk-header__menu-button govuk-js-header-toggle gem-c-header__menu-button govuk-!-display-none-print"
+              type="button"
+              data-button-name="menu"
+            >
+              <%= t("components.layout_header.menu") %>
+            </button>
+            <ul id="navigation" class="govuk-header__navigation-list">
+
+            <%= render Layout::AccountMenuComponent.new(current_user) %>
+
+            <%= render Layout::SubnavigationComponent.new %>
+            <%= yield :header_addon %>
+
+            </ul>
+            <% end %>
+
+          </div>        
   </div>
-
-  <div id="navigation_bar" class="subnavigation">
-    <div class="hide-for-small-only">
-      <%= render Layout::SubnavigationComponent.new %>
-    </div>
-
-    <%= yield :header_addon %>
   </div>
 </header>
+
