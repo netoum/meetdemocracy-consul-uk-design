@@ -1,4 +1,18 @@
-.new_user input {
+input[type=text], [type=email], [type=password] {
     @extend .gem-c-input; 
     @extend .govuk-input
 }
+
+textarea {
+    @extend .govuk-textarea
+}
+
+div select {
+    @extend .govuk-form-group;
+    @extend .gem-c-select  
+}
+
+select {
+    @extend .govuk-select
+}
+
