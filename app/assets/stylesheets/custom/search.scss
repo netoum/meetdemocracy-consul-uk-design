@@ -1,11 +1,11 @@
 .advanced-search{
-    @extend .gem-c-button;
+    @extend .govuk-button;
     @extend .govuk-button;
     @extend .govuk-button--secondary;
     margin-bottom: 5px;
     
 }
-.gem-c-search{
+.govuk-search{
     margin-bottom: 5px;
 
 }
