@@ -57,11 +57,7 @@
 @import "subscriptions";
 @import "widgets/**/*";
 
-@import 'govuk_publishing_components/govuk_frontend_support';
-@import 'govuk_publishing_components/component_support';
-@import 'govuk_publishing_components/components/layout-header';
-@import 'govuk_publishing_components/components/search';
-@import 'govuk_publishing_components/components/button';
+@import "govuk/all";
 
 @import "custom";
 @import "custom/**/*";

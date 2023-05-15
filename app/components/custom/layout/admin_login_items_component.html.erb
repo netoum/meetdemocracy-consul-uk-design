@@ -1,7 +1,8 @@
 
-<li class="govuk-header__navigation-item">
+<li class="govuk-header__navigation-item has-submenu">
   <%= link_to t("layouts.header.administration_menu"), "#", rel: "nofollow", class: "govuk-header__link" %>
-  <%= link_list(*admin_links, class: "submenu menu", data: { submenu: true }) %>
+  <%= link_list(*admin_links, class: "submenu is-dropdown-submenu first-sub vertical dropdown", data: { submenu: true }) %>
 </li>
+
 
 

@@ -1,0 +1,22 @@
+form {
+
+input[type=text], [type=email], [type=password] {
+    @extend .govuk-input; 
+    @extend .govuk-input;
+}
+
+textarea {
+    @extend .govuk-textarea;
+}
+
+div select {
+    @extend .govuk-form-group;
+    @extend .govuk-select;
+}
+
+select {
+    @extend .govuk-select;
+}
+
+}
+

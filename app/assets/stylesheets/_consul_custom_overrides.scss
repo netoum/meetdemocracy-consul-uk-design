@@ -14,3 +14,11 @@
 $brand:            #1d70b8 !default;
 $brand-secondary:   #f3f2f1 !default;
 $outline-focus:     2px solid #ffdd00 !default;
+
+$text-medium:       #0b0c0c !default;
+$text-light:        #505a5f !default;
+
+$border:            	#b1b4b6 !default;
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+$body-font-family: "Roboto" !important !default;
