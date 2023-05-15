@@ -1,0 +1,20 @@
+.is-dropdown-submenu{
+
+    position: relative;
+    display: inline;
+    li{
+        @extend .govuk-header__navigation-item;
+    }
+    a{
+        @extend .govuk-header__link;
+    }
+}
+
+.is-dropdown-submenu-parent a::after {
+    top: 0;
+    margin-top: -0px;
+  }
+  
+  .dropdown{
+    z-index: 9;
+  }

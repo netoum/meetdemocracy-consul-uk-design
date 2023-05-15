@@ -1,3 +1,21 @@
 .govuk-header__menu-button {
   display: block;
 }
+
+@media only screen and (min-width: 768px) {
+    .large-right {
+       float: right !important;
+    }
+ }
+
+ @media only screen and (min-width: 768px) {
+    .hide-large {
+       display: none !important;
+    }
+ }
+
+ @media only screen and (max-width: 768px) {
+    .show-large {
+       display: none !important;
+    }
+ }

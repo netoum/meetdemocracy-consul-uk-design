@@ -1,4 +1,4 @@
-<header class="govuk-header " role="banner" data-module="govuk-header">
+<!-- <header class="govuk-header govuk-layout-header gov-uk-layout-header--demonstration" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <%= link_to root_path, accesskey: "0", class:"govuk-header__link govuk-header__link--homepage" do %>
@@ -17,5 +17,47 @@
       </nav>
     </div>
   </div>
-
+</header> -->
+<header class="gem-c-layout-header govuk-header gem-c-layout-header--demonstration" role="banner"
+  data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-grid-row">
+      <div class="gem-c-layout-header__logo govuk-grid-column-one-thirds">
+        <div class="govuk-header__logo gem-c-header__logo">
+          <a href="<%= root_path %>" class="govuk-header__link govuk-header__link--homepage"
+            data-module="gem-track-click" data-track-category="homeLinkClicked" data-track-action="homeHeader">
+            <span class="govuk-header__logotype gem-c-header__logotype header-logo">
+              <span class="govuk-header__logotype-text">
+                <%= setting["org_name"] %>
+              </span>
+            </span>
+            <span class="gem-c-environment-tag govuk-tag gem-c-environment-tag--development">
+              development
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <nav aria-label="Menu" class="govuk-header__navigation float large-right">
+          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation"
+            aria-label="Show or hide menu" hidden>Menu</button>
+          <ul id="navigation" class="govuk-header__navigation-list">
+            <%= render Layout::AccountMenuComponent.new(current_user) %>
+            <div class="hide-large">
+              <%= render Layout::SubnavigationComponent.new %>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <nav aria-label="Menu2" class="govuk-header__navigation ">
+        <ul id="navigation2" class="govuk-header__navigation-list">
+          <div class="show-large">
+            <%= render Layout::SubnavigationComponent.new %>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

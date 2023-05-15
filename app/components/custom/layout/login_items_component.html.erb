@@ -13,7 +13,7 @@
                                      t("layouts.header.my_account_link") %>
 <li class="govuk-header__navigation-item">
     <%= link_to t("devise_views.menu.login_items.logout"),
-                destroy_user_session_path, rel: "nofollow", method: :delete, class: "govuk-header__link" %>
+                destroy_user_session_path, rel: "nofollow", method: :delete, class: "govuk-button govuk-button--warning govuk-button--small" %>
   </li>
 <% else %>
 
