@@ -120,19 +120,17 @@
 //= require rails-timeago
 //= require rails-timeago-all
 
-
-//= require govuk_publishing_components/dependencies
-//= require govuk_publishing_components/lib
-//= require govuk_publishing_components/components/button
-//= require govuk_publishing_components/components/layout-header
-
 //= require govuk-frontend-4.6.0.min
+//= require govuk
+
 //= require custom
 //= require_tree ./custom
 
+
+
 var initialize_modules = function() {
   "use strict";
-
+  App.Govuk.initialize();
   App.Answers.initialize();
   App.Questions.initialize();
   App.Comments.initialize();
