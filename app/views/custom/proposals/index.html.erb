@@ -99,12 +99,17 @@
         <%= paginate @proposals %>
 
         <% unless @search_terms || @advanced_search_terms %>
-        <div id="section_help" class="margin" data-magellan-target="section_help">
-          <p class="lead">
-            <strong><%= t("proposals.index.section_footer.title") %></strong>
-          </p>
-          <p><%= t("proposals.index.section_footer.description") %></p>
-        </div>
+        <details class="govuk-details" data-module="govuk-details" id="section_help" data-magellan-target="section_help">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <strong><%= t("proposals.index.section_footer.title") %></strong>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p><%= t("proposals.index.section_footer.description") %></p>
+          </div>
+        </details>
+       
         <% end %>
       </div>
     </div>
