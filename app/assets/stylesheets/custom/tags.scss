@@ -1,0 +1,15 @@
+.debate, .proposal  {
+    .tags {
+        a {
+            @extend .govuk-tag;
+            @extend .govuk-tag--grey
+        }
+        
+    }
+}
+
+.categories {
+    a {
+        @extend .govuk-tag;
+    }
+}
