@@ -1,0 +1,9 @@
+<% if page.current? %>
+  <li class="govuk-pagination__item govuk-pagination__item--current">
+    <a href="#" class="govuk-link govuk-pagination__link"> <%= page %> </a> 
+  </li>
+<% else %>
+  <li class="govuk-pagination__item">
+    <%= link_to page, url, { remote: remote, rel: page.next? ? "next" : page.prev? ? "prev" : nil, class:'govuk-link govuk-pagination__link'  }%>
+  </li>
+<% end %>
