@@ -68,16 +68,21 @@
       <%= paginate @debates %>
 
       <% unless @search_terms || @advanced_search_terms %>
-        <div id="section_help" class="margin" data-magellan-target="section_help">
-          <p class="lead">
-            <strong><%= t("debates.index.section_footer.title") %></strong>
-          </p>
-          <p><%= t("debates.index.section_footer.description") %></p>
-          <p><%= t("debates.index.section_footer.help_text_1") %></p>
-          <p><%= sanitize(t("debates.index.section_footer.help_text_2",
-                    org: link_to(setting["org_name"], new_user_registration_path))) %></p>
-          </p>
-        </div>
+        <details id="section_help" data-magellan-target="section_help" class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              <strong><%= t("debates.index.section_footer.title") %></strong>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p><%= t("debates.index.section_footer.description") %></p>
+            <p><%= t("debates.index.section_footer.help_text_1") %></p>
+            <p><%= sanitize(t("debates.index.section_footer.help_text_2",
+                      org: link_to(setting["org_name"], new_user_registration_path))) %></p>
+            </p>
+          </div>
+        </details>
+        
       <% end %>
     </div>
 
