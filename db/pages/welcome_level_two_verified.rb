@@ -1,7 +1,7 @@
 def generate_content(page)
   page.title = I18n.t("welcome.welcome.title")
 
-  page.content = "<div class='govuk-panel__body'>
+  page.content = "<div class='govuk-panel govuk-panel--confirmation'>
                     <p>#{I18n.t("welcome.welcome.user_permission_info")}</p>
                    
                       <p>#{I18n.t("verification.user_permission_debates")}</p>
