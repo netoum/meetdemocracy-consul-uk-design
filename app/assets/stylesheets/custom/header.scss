@@ -19,3 +19,30 @@
        display: none !important;
     }
  }
+
+ .top-bar {
+   @extend .govuk-header;
+   ul{
+      li {
+         @extend .govuk-header__navigation-item;
+         a {
+            @extend .govuk-header__link;
+         }
+      }
+   }
+ }
+ 
+ .admin-sidebar {
+   background: black !important;
+   ul {
+     @extend .govuk-accordion;
+     li {
+       @extend .govuk-accordion__section;
+     }
+     a {
+       @extend .govuk-accordion__section-button;
+       color: white !important;
+     }
+   }
+ }
+ 

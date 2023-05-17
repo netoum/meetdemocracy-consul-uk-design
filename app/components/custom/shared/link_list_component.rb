@@ -26,9 +26,9 @@ class Shared::LinkListComponent < ApplicationComponent
           link_options = options
         end
 
-        tag.li(class: "govuk-header__navigation-item","aria-current": (true if current)) do
+        tag.li("aria-current": (true if current)) do
           if url
-            link_to text, url, class:"govuk-header__link"
+            link_to text, url, link_options
           else
             text
           end
