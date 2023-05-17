@@ -86,67 +86,67 @@ $table-header:   #ecf1f6;
     }
   }
 
-  table {
+  // table {
 
-    caption {
-      font-style: italic;
-      font-weight: normal;
-      padding: 0;
-      text-align: $global-left;
-    }
+  //   caption {
+  //     font-style: italic;
+  //     font-weight: normal;
+  //     padding: 0;
+  //     text-align: $global-left;
+  //   }
 
-    thead {
+  //   thead {
 
-      &,
-      tr {
-        border: 0;
-      }
+  //     &,
+  //     tr {
+  //       border: 0;
+  //     }
 
-      th:first-of-type {
-        border-top-left-radius: rem-calc(8);
-      }
+  //     th:first-of-type {
+  //       border-top-left-radius: rem-calc(8);
+  //     }
 
-      th:last-of-type {
-        border-top-right-radius: rem-calc(8);
-      }
-    }
+  //     th:last-of-type {
+  //       border-top-right-radius: rem-calc(8);
+  //     }
+  //   }
 
-    th {
-      background: $table-header;
-      color: $admin-text;
-      padding: $line-height / 2;
+  //   th {
+  //     background: $table-header;
+  //     color: $admin-text;
+  //     padding: $line-height / 2;
 
-      a {
-        color: inherit;
-        white-space: nowrap;
-      }
-    }
+  //     a {
+  //       color: inherit;
+  //       white-space: nowrap;
+  //     }
+  //   }
 
-    tr {
-      border: $table-border;
+  //   tr {
+  //     border: $table-border;
 
-      &:hover {
-        background: adjust-color(darken($table-background, 2%), $red: -4, $green: -1);
-      }
-    }
+  //     &:hover {
+  //       background: adjust-color(darken($table-background, 2%), $red: -4, $green: -1);
+  //     }
+  //   }
 
-    .break {
-      word-break: break-word;
-    }
+  //   .break {
+  //     word-break: break-word;
+  //   }
 
-    &.fixed {
-      table-layout: fixed;
-    }
+  //   &.fixed {
+  //     table-layout: fixed;
+  //   }
 
-    [type="submit"] ~ a {
-      margin-left: $line-height / 2;
-    }
+  //   [type="submit"] ~ a {
+  //     margin-left: $line-height / 2;
+  //   }
 
-    [type="checkbox"] {
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-  }
+  //   [type="checkbox"] {
+  //     margin-bottom: 0;
+  //     vertical-align: middle;
+  //   }
+  // }
 
   hr {
     max-width: none;
