@@ -31,7 +31,20 @@
       }
    }
  }
+ .govuk-header__container {
+
+ ul > ul {
  
+      li {
+         @extend .govuk-header__navigation-item;
+         a {
+            @extend .govuk-header__link;
+         }
+      }
+   }
+ }
+
+
  .admin-sidebar {
    background: black !important;
    ul {
@@ -46,3 +59,5 @@
    }
  }
  
+
+
