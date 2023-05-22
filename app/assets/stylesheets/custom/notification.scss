@@ -1,13 +1,6 @@
-.govuk-notification-banner__heading{
-    font-weight: normal !important;
-    font-size: normal!important;
-}
 
-.close-button{
-top: 0!important;
-right: 0!important;
-}
-
-.govuk-notification-banner{
-    max-width: 600px;
+.mark-notification {
+    @extend .govuk-tag;
+    @extend .govuk-tag--grey;
+    margin-top: 5px;
 }
