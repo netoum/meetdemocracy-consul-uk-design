@@ -1,0 +1,13 @@
+<% provide(:title) { t("devise_views.users.registrations.success.title") } %>
+<div class="govuk-panel govuk-panel--confirmation">
+  <h2 class="govuk-panel__title"><%= t("devise_views.users.registrations.success.title") %></h2>
+  <div class="govuk-panel__body">
+    <p><%= sanitize(t("devise_views.users.registrations.success.thank_you")) %></p>
+    <p><%= sanitize(t("devise_views.users.registrations.success.instructions_1")) %></p>
+    <p><%= t("devise_views.users.registrations.success.instructions_2") %></p>
+    <p>
+      <%= link_to t("devise_views.users.registrations.success.back_to_index"),
+          root_path, class: "govuk-button" %>
+    </p>
+  </div> 
+</div>
