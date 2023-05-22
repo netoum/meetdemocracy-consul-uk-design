@@ -18,7 +18,7 @@
     @extend .govuk-tag--red
 }
 
-.level-2, .level-3 {
+.level-2, .level-3, .success {
     @extend .govuk-tag;
     @extend .govuk-tag--green
 }
