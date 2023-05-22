@@ -1,0 +1,17 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation" class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <div class="govuk-error-summary__body">
+        <% errors_count = resource.errors.messages.excluding(:base).count %>
+
+        <%= pluralize errors_count, t("form.error"), t("form.errors") %>
+
+        <% if local_assigns[:message].present? %>
+          <%= message %>
+        <% else %>
+          <%= sanitize(t("form.not_saved", resource: t("form.#{resource.class.to_s.underscore}"))) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
