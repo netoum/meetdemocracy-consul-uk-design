@@ -16,14 +16,9 @@ Meet democracy platform allows the participants of your community to debate and 
 
 ## What's new ?
 
-- Add Gem "govuk_publishing_components"
-Design your service using GOV.UK styles, components and patterns
-Use this design system to make government services consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.
-[gem 'govuk_publishing_components'](https://design-system.service.gov.uk/)
+- Install govuk-frontend package for GOV.UK design System to enhance the user interface and design of the application. The GOV.UK Design System, available at [https://design-system.service.gov.uk/](https://design-system.service.gov.uk/), provides a set of reusable components, styles and Patterns.
 
-- Add Custom route for Gov.UK component route.
-Only available for development environment
-Can be access at http://localhost:3000/component-guide/
+- Add @import "govuk/all" in application.scss to import the necessary CSS and JS.
 
 
 ## Run Locally
