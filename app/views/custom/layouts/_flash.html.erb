@@ -1,9 +1,9 @@
 <% flash.each do |flash_key, flash_message| %>
-  <div id="<%= flash_key %>" data-alert class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" data-closable>
+  <div id="<%= flash_key %>" data-alert class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" data-closable style="position: relative">
     <div class="govuk-notification-banner__content <%= flash_key %>">
-      <div class="govuk-notification-banner__heading" style="position: relative">
+      <div class="govuk-notification-banner__heading">
         <%= sanitize(flash_message) %>
-        <button class="close-button" aria-label="<%= t("application.close") %>" type="button" data-close>
+        <button class="close-button" aria-label="<%= t("application.close") %>" type="button" data-close style="position: absolute">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
