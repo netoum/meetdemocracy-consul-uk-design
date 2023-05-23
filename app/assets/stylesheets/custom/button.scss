@@ -1,13 +1,13 @@
 .button{
-    @extend .govuk-button;
-    @extend .govuk-button;
-  }
+  @extend .govuk-button;  
+}
 .delete {
   @extend .govuk-button;
-    @extend .govuk-button;
-    @extend .govuk-button--warning;
-   }
+  @extend .govuk-button--warning;
+}
+.button.hollow {
+  @extend .govuk-button;
+  @extend .govuk-button--secondary;
+  width: 100% !important;
 
-.hollow {
-    @extend .govuk-button--secondary;
-   }
+}
