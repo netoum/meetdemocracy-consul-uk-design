@@ -1,0 +1,27 @@
+<% if header.present? %>
+  <div class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row govuk-!-padding-left-3 govuk-!-padding-right-3">
+      <div class="govuk-grid-column-two-thirds-from-desktop <%= "medium-9 small-centered text-center" unless header.image.present? %>">
+        <span><%= header.label %></span>
+        <h1 class="govuk-heading-l"><%= header.title %></h1>
+
+        <p class="govuk-body"><%= header.description %></p>
+
+        <% if header.link_text.present? && header.link_url.present? %>
+         
+            <%= link_to header.link_text, header.link_url, class: "govuk-button" %>
+          
+        <% end %>
+      </div>
+
+      <% if header.image.present? %>
+        <div class="govuk-grid-column-one-third-from-desktop">
+          <%= image_tag(header.image.variant(:large),
+                        class: "govuk-image",
+                        alt: header.image.title) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+<% end %>

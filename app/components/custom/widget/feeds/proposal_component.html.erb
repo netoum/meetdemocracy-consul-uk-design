@@ -1,0 +1,19 @@
+<div class="govuk-!-margin-bottom-5">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <strong class="govuk-heading-s"><%= link_to proposal.title, url_for(proposal) %></strong><br>
+      <p class="govuk-body"><%= proposal.summary %></p>
+      <%= render SDG::TagListComponent.new(proposal, limit: 5) %>
+    </div>
+
+    <% if proposal.image.present? %>
+      <div class="govuk-grid-column-one-half">
+        <div class="image-container">
+          <%= image_tag proposal.image.variant(:thumb),
+                      alt: proposal.image.title.unicode_normalize, class:'govuk-image', style:'max-width: 100%' %>
+        </div>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
