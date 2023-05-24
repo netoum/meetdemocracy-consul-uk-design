@@ -11,3 +11,9 @@
   width: 100% !important;
 
 }
+
+.feeds-list a.see-all {
+  @extend .govuk-button;
+  @extend .govuk-button--secondary;
+  color: $brand !important
+}
