@@ -1,12 +1,11 @@
 <% cache [locale_and_user_status, debate, current_user&.voted_as_when_voted_for(debate)] do %>
   <div id="<%= dom_id(debate) %>" class="debate clear" data-type="debate">
     <div class="panel">
-      <div class="row">
-
-        <div class="small-12 medium-9 column">
-          <div class="debate-content">
-            <h3><%= link_to debate.title, debate %></h3>
-            <p class="debate-info">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <div class="govuk-card">
+            <h3 class="govuk-heading-m"><%= link_to debate.title, debate %></h3>
+            <p class="govuk-body">
               <%= timeago_tag debate.created_at.to_date, force: true, lang: I18n.locale, title:"#{debate.created_at.to_date}"  %> 
               <span class="bullet">&nbsp;&bull;&nbsp;</span>
               <%= render Shared::CommentsCountComponent.new(
@@ -40,7 +39,7 @@
               <% end %>
 
             </p>
-            <div class="debate-description">
+            <div class="govuk-body">
               <%= wysiwyg(debate.description) %>
               <div class="truncate"></div>
             </div>
@@ -48,7 +47,7 @@
           </div>
         </div>
 
-        <div id="<%= dom_id(debate) %>_votes" class="small-12 medium-3 column">
+        <div id="<%= dom_id(debate) %>_votes" class="govuk-grid-column-one-third-from-desktop">
             <%= render "debates/votes", debate: debate %>
         </div>
 
