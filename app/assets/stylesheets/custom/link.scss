@@ -1,0 +1,9 @@
+.icon-angle-left {
+    @extend .govuk-back-link
+}
+
+.float-right-medium, .comments-count, .small {
+    a {
+        @extend .govuk-link;
+    }
+}
